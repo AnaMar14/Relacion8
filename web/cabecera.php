@@ -24,4 +24,28 @@ spl_autoload_register(function ($clase){
 
 include(RUTABASE."/aplicacion/plantilla/plantilla.php");
 
+const COLORESTEXTO=[
+    "Negro"=> "black",
+    "Rojo"=> "red",
+    "Verde"=> "green",
+    "Blanco"=> "white"
+];
+const COLORESFONDO=[
+    "Blanco"=> "white",
+    "Negro"=> "black",
+    "Beige"=> "beige",
+    "Rosa"=> "pink",
+    "Azul"=> "blue"
+];
+
+$fondo="white";
+$texto="black";
+
+if(isset($_COOKIE["fondo"])){
+    $fondo=$_COOKIE["fondo"];
+}
+
+if(isset($_COOKIE["texto"])){
+    $texto=$_COOKIE["texto"];
+}
 //creo todos los objetos que necesita mi aplicación

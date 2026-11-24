@@ -26,7 +26,9 @@ function cabecera() {}
 function cuerpo()
 {
 ?>
-
+    <br>
+    <a href="../personalizar/index.php">Página inicio de personalizar</a> <br><br>
+    <a href="../personalizar/personalizar.php">Página para personalizar colores</a>
  
  
 

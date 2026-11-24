@@ -38,6 +38,12 @@ function inicioCabecera($titulo)
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
         
         <link rel="stylesheet" type="text/css" href="/estilos/base.css">
+        <style>
+            #documento{
+                background-color: <?= $_COOKIE["fondo"] ?> ;
+                color: <?= $_COOKIE["texto"] ?>
+            }
+        </style>
 <?php
 }
 
