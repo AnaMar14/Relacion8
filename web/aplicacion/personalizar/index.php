@@ -2,6 +2,8 @@
 include_once(dirname(__FILE__) . "/../../cabecera.php");
 //controlador
 
+//cada vez que se carga el documento php sobreescribe la cookie
+//añadiendole +1 al valor de la cookie antes de entrar
 $visitas=isset($_COOKIE["visitas"])? (int)$_COOKIE["visitas"]:0;
 $visitas++;
 setcookie("visitas",$visitas, time() + 60*60*24);
