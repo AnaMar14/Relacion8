@@ -40,8 +40,8 @@ function inicioCabecera($titulo)
         <link rel="stylesheet" type="text/css" href="/estilos/base.css">
         <style>
             #documento{
-                background-color: <?= $_COOKIE["fondo"] ?> ;
-                color: <?= $_COOKIE["texto"] ?>
+                background-color: <?= $_COOKIE["colorFondo"] ?> ;
+                color: <?= $_COOKIE["colorTexto"] ?>;
             }
         </style>
 <?php

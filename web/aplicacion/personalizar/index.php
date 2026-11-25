@@ -47,7 +47,7 @@ function cabecera()
 function cuerpo($visitas)
 {
 ?>
-
+<h3>Veces accedidas a la página: <?= $visitas ?></h3>
     <h2>Pasos del método científico</h2>
     <p>Los pasos del método científico son seis etapas ordenadas que permiten investigar un fenómeno y comprobar si una explicación es verdadera:<br><br>
         1. Observación: Identificar un fenómeno, problema o comportamiento en la realidad utilizando los sentidos o instrumentos de medición.<br><br>
@@ -57,7 +57,7 @@ function cuerpo($visitas)
         5. Análisis de resultados: Organizar, comparar e interpretar los datos obtenidos durante el experimento (usando tablas, gráficos o cálculos) para ver si respaldan la hipótesis.<br><br>
         6. Conclusión y comunicación: Determinar si la hipótesis se acepta o se rechaza. Si es falsa, se formula una nueva hipótesis y se repite el proceso; si se confirma, se comparten los hallazgos con los demás.<br><br>
     </p>
-    <h3>Veces accedidas a la página: <?= $visitas ?></h3>
+    
    
 <?php
 

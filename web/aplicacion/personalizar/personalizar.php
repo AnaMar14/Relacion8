@@ -4,12 +4,19 @@ include_once(dirname(__FILE__) . "/../../cabecera.php");
 
 if(isset($_POST["guardarColores"])){
     $nuevoFondo= $_POST["colorFondo"] ?? "white";
-    $nuevoTexto= $_POST["colorTexto"] ?? "white";
+    $nuevoTexto= $_POST["colorTexto"] ?? "black";
+    //setcookie guarda la cookie el tiempo que le indiquemos
+    //pero no se muestra si no se recarga la página
     setcookie("colorFondo",$nuevoFondo,time()+60*60*24);
     setcookie("colorTexto",$nuevoTexto,time()+60*60*24);
+    //para que se muestren lo cambios nada mas enviado el formulario
+    //ademas de guardarlo, cambiamos en tiempo real el array cookies con los
+    //nuevos valores. Esto no lo guarda en la cookie pero como ya la hemos
+    //guardado anteriormente con setcookie nos sirve para mostrar el cambio al momento
+    $_COOKIE["colorFondo"] = $nuevoFondo;
+    $_COOKIE["colorTexto"] = $nuevoTexto;
 
-    $fondo=$nuevoFondo;
-    $texto=$nuevoTexto;
+  
 }
 
 $barra=[
@@ -59,7 +66,7 @@ function cuerpo()
         <?php
             foreach(COLORESFONDO as $nombreColor=>$valor){
                 ?>
-                <option value="$valor"> <?=$nombreColor?> </option>
+                <option value="<?= $valor ?>"> <?=$nombreColor?> </option>
                 <?php
             }
         ?>
@@ -71,7 +78,7 @@ function cuerpo()
         <?php
             foreach(COLORESTEXTO as $nombreColor=>$valor){
                 ?>
-                <option value="$valor"> <?=$nombreColor?> </option>
+                <option value="<?= $valor ?>"> <?=$nombreColor?> </option>
                 <?php
             }
         ?>

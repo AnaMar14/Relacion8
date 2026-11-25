@@ -38,8 +38,7 @@ const COLORESFONDO=[
     "Azul"=> "blue"
 ];
 
-$fondo="white";
-$texto="black";
+
 
 if(isset($_COOKIE["fondo"])){
     $fondo=$_COOKIE["fondo"];
