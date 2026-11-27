@@ -14,11 +14,11 @@ $barra=[
        "ENLACE" =>"/index.php",
      ],
        [ 
-       "TEXTO"=> "Página inicio",   
+       "TEXTO"=> "Relacion 8",   
        "ENLACE" =>"/aplicacion/relacion8/index.php",
      ], 
        [ 
-       "TEXTO"=> "Página inicio",   
+       "TEXTO"=> "Personalización",   
      ] 
 ];
 //datos basicos
@@ -27,10 +27,10 @@ $barra=[
 
 
 //dibuja la plantilla de la vista
-inicioCabecera("Mi aplicación");
+inicioCabecera("Personalización");
 cabecera();
 finCabecera();
-inicioCuerpo("Página inicio");
+inicioCuerpo("Personalización",$barra);
 cuerpo($visitas);  //llamo a la vista
 finCuerpo();
 // **********************************************************

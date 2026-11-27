@@ -25,7 +25,7 @@ $barra=[
        "ENLACE" =>"/index.php",
      ],
        [ 
-       "TEXTO"=> "Personalizar colores",   
+       "TEXTO"=> "Relacion 8",   
        "ENLACE" =>"/aplicacion/relacion8/index.php",
      ], 
        [ 
@@ -41,7 +41,7 @@ $barra=[
 inicioCabecera("Mi aplicación");
 cabecera();
 finCabecera();
-inicioCuerpo("Personalizar colores");
+inicioCuerpo("Personalizar colores",$barra);
 cuerpo();  //llamo a la vista
 finCuerpo();
 // **********************************************************

@@ -28,7 +28,8 @@ function cuerpo()
 ?>
     <br>
     <a href="../personalizar/index.php">Página inicio de personalizar</a> <br><br>
-    <a href="../personalizar/personalizar.php">Página para personalizar colores</a>
+    <a href="../personalizar/personalizar.php">Página para personalizar colores</a> <br><br>
+    <a href="../texto/verTextos.php">Ver textos</a>
  
  
 

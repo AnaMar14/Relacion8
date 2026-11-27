@@ -10,30 +10,26 @@ class RegistroTexto{
         return $this->_cadena;
     }
 
- 
-    public function setCadena($cadena)
-    {
-        $this->_cadena = $cadena;
-
-        return $this;
-    }
-
 
     public function getFecha()
     {
         return $this->_fecha;
     }
 
-
-    public function setFecha($fecha)
+    public function __construct(string $cadena)
     {
-        $this->_fecha = $fecha;
-
-        return $this;
+        $this->_cadena=$cadena;
+        $this->_fecha=new DateTime();
     }
 
-    public function __construct()
+    /**Dehabilitamos sobrecarga dinamica de propiedades */
+    public function __set($name, $value)
     {
-        throw new \Exception('Not implemented');
+        throw new \Exception('Sobrecarga dinámica no permitida');
+    }
+
+    public function __toString():string
+    {
+       return $this->_cadena . " escrito en " . $this->_fecha->format("d/m/Y H:i:s");
     }
 }
